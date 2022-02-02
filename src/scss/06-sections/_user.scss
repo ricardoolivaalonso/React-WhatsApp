@@ -1,0 +1,58 @@
+.user{
+    &__settings{
+        display: flex;
+        justify-content: space-between;
+        padding: var(--gap) var(--gap-h);
+        border-right: 1px solid rgba(var(--gray),.25);
+
+        @media (max-width: $mq-mobile) { border-right: none; }
+
+        &-profile,
+        &-icons{
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+        }
+        &-icons{
+            cursor: pointer;
+        }
+        &-profile{ gap: var(--gap-h); }
+    }
+
+    &__form{
+        display: grid;
+        grid-template-columns: 40px 1fr auto;
+        gap: var(--gap-h);
+        padding: 0 var(--gap-h);
+        height: 50px;
+
+        &-column{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+        &-button{ 
+            padding: calc(var(--gap)/2); 
+            cursor: pointer;
+        }
+        &-input{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__list{
+        height: calc(100vh - 150px);
+        min-height: calc(400px - 150px);
+        overflow: hidden;
+
+        @media (max-width: $mq-desktop) {  
+            height: calc(100vh - 110px);
+            min-height: calc(400px - 110px); 
+        }
+    }
+    &__cards{
+        overflow-y: auto;
+        height: 100%;
+    }
+}

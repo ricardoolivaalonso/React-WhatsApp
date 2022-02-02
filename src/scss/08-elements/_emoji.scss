@@ -1,0 +1,12 @@
+.emojibox{
+    position: absolute;
+    bottom: 100px;
+    z-index: 10;
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(var(--greenMessage), .5);
+    border: 1px solid rgba(var(--greenMessage), 1);
+    
+    @media (max-width: $mq-desktop) { 
+        bottom: 65px;
+    }
+}

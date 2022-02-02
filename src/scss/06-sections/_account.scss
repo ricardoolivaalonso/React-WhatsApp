@@ -1,0 +1,32 @@
+.account{
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: calc(var(--gap)*3);
+    }
+        &__title{
+            font-size: 1.5rem;
+            text-transform: capitalize;
+        }
+        &__subtitle{
+            font-size: 1rem;
+            text-transform: capitalize;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    &__input,
+    &__submit{
+        height: 60px;
+        font-size: 1rem;
+        letter-spacing: .0125rem;
+    }
+    &__input{
+        padding: calc(var(--gap)*3);
+    }
+    &__submit{
+        font-weight: 600;
+        background-color: rgba(var(--bg-1), 1);
+        color: rgba(var(--white), 1);
+    }
+}

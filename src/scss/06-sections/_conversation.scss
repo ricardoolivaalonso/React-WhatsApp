@@ -1,0 +1,76 @@
+.conversation{
+    &__settings{
+        display: flex;
+        justify-content: space-between;
+        padding: var(--gap) var(--gap-h);
+        gap: var(--gap);
+
+        @media (max-width: $mq-mobile) { 
+            display: grid;
+            justify-items: start;
+            grid-template-columns: 1fr;
+        }
+
+        &-profile,
+        &-icons{
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+
+            @media (max-width: $mq-mobile) { 
+                display: grid;
+                justify-items: start;
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+        }
+        &-profile{ gap: var(--gap-h); }
+        &-form{ width: 100%; }
+    }
+
+    &__list{
+        position: relative;
+        height: calc(100vh - 165px);
+        min-height: calc(400px - 165px);
+        
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgba(var(--bg-3),1);
+        padding: 12px;
+        padding-top: 48px;
+
+        @media (max-width: $mq-desktop) { 
+            height: calc(100vh - 125px);
+            min-height: calc(400px - 125px);
+        }
+        @media (max-width: $mq-mobile) { 
+            height: calc(100vh - 165px);
+            min-height: calc(400px - 165px);
+        }
+    }
+    &__counter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+
+        display: block;
+        background-color: rgba(var(--greenMessage),.5);
+        padding: var(--gap) var(--gap-h);
+        font-size: .75rem;
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+        align-content: end;
+        justify-content: start;
+        row-gap: 12px;
+        
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+
+        @media (max-width: $mq-mobile) { max-width: 90%; }
+    }
+}

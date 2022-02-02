@@ -1,0 +1,42 @@
+.card{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--gap-h);
+    padding: var(--gap) var(--gap-h);
+    cursor: pointer;
+    transition: background-color 100ms;
+
+    &:hover{
+        background-color: rgba(var(--greenMessage),.35);
+        transition: background-color 100ms;
+    }
+    &--active{
+        transition: background-color 100ms;
+        background-color: rgba(var(--greenMessage), 1);
+    }
+
+    &__description{ display: grid; }
+    &__info{
+        display: grid;
+        justify-items: end;
+
+        &-date{
+            font-size: .75rem;
+            color: rgba(var(--gray), 1);
+        }
+        &-counter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+
+            font-size: .75rem;
+            border-radius: 50%;
+            color: rgba(var(--white), 1);
+            background-color: rgba(var(--green), 1);
+        }
+    }
+
+    
+}

@@ -1,0 +1,14 @@
+.avatar{
+    &__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        
+        text-transform: capitalize;
+        border-radius: 50%;
+        background-color: rgba(var(--gray), 1);
+        color: rgba( var(--white), 1);
+    }
+}
